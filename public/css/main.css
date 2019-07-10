@@ -108,7 +108,6 @@ body {
 
 .board__canvases {
   position: relative;
-  /*flex: 1;*/
   height: 480px;
 }
 
