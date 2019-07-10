@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: consolas, sans-serif;
+}
+
+.wrapper {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.title {
+  text-align: center;
+  padding: 20px 10px;
+  font-family: "Trebuchet MS";
+  border-bottom: 1px solid #ddd;
+}
+
+.title__heading {
+  font-size: 24px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.actions a {
+  color: #444;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0 15px;
+}
+
+.actions a:nth-of-type(odd) {
+  border-right: 1px solid #ddd;
+}
+
+.actions a span {
+  margin-right: 5px;
+}
+
+.actions a:hover {
+  color: hsl(20, 100%, 60%);
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  box-shadow: 0 2px 4px rgba(70,70,70,0.3), 0 -2px 4px rgba(70,70,70,0.3);
+  border-radius: 4px;
+  width: 100%;
+  max-width: 767px;
+}
+
+@media (min-width: 768px) {
+  .board {
+    flex-direction: row;
+  }
+}
+
+.board__tools {
+  flex-basis: 100%;
+  border-bottom: 1px solid #ccc;
+
+  display: flex;
+  flex-direction: row;
+}
+
+@media (min-width: 768px) {
+  .board__tools {
+    flex-basis: 40px;
+    border-right: 1px solid #ccc;
+
+    flex-direction: column;
+  }
+}
+
+.board__tool {
+  height: 40px;
+  line-height: 40px;
+  width: 40px;
+  border: none;
+  background: transparent;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.board__tool.active {
+  background: hsla(20, 100%, 63%, 0.7);
+  color: #fff;
+}
+
+.board__tool:hover {
+  cursor: pointer;
+  background: rgba(170,170,170,0.8);
+}
+
+.board__canvases {
+  position: relative;
+  /*flex: 1;*/
+  height: 480px;
+}
+
+@media (min-width: 768px) {
+  .board__canvases {
+    flex: 1;
+  }
+}
+
+.board__canvas {
+  position: absolute;
+  width: 100%;
+  image-rendering: optimizeQuality;
+}
+
+@media (max-width: 640px) {
+  .board__canvas {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+
+#rectTool span {
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin: 0 auto;
+  background: #555;
+}
+
+#strokeRectTool span {
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin: 0 auto;
+  border: 2px solid #555;
+}
+
+#lineTool span {
+  display: block;
+  margin: 0 auto;
+  width: 2px;
+  height: 25px;
+  transform: rotate(20deg);
+  background: #555;
+}
