@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Paperboard</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="fonts/linearicons/style.css">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="title">
+        <h2 class="title__heading">Paperboard</h2>
+      </header>
+      <div class="actions">
+        <a href="#" class="clear-board" id="clearBoard">
+          <span class="lnr lnr-trash"></span>CLEAR BOARD
+        </a>
+        <a href="#" class="export-btn" id="exportImage">
+          <span class="lnr lnr-download"></span>EXPORT IMAGE
+        </a>
+      </div>
+      <section class="board">
+        <div class="board__tools">
+          <button class="board__tool active" id="pencilTool">
+            <span class="lnr lnr-pencil"></span>
+          </button>
+          <button class="board__tool" id="eraserTool">
+            <span class="lnr lnr-highlight"></span>
+          </button>
+          <button class="board__tool" id="rectTool">
+            <span></span>
+          </button>
+          <button class="board__tool" id="strokeRectTool">
+            <span></span>
+          </button>
+          <button class="board__tool" id="lineTool">
+            <span></span>
+          </button>
+          <input type="color" name="color" id="colorInput" value="#000000" style="display: none;" />
+          <label for="colorInput" class="board__tool" id="colorTool">
+            <span class="lnr lnr-drop" style="padding-bottom: 5px;"></span>
+          </label>
+        </div>
+        <div class="board__canvases">
+          <canvas id="canvas" class="board__canvas" width="640" height="480">
+            <p>Your browser does not support the HTML5 Canvas. Please upgrade to the latest version of Chrome, Firefox or Edge</p>
+          </canvas>
+          <canvas id="overlayCanvas" class="board__canvas" width="640" height="480">
+            <p>Your browser does not support the HTML5 Canvas. Please upgrade to the latest version of Chrome, Firefox or Edge</p>
+          </canvas>
+        </div>
+      </section>      
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
